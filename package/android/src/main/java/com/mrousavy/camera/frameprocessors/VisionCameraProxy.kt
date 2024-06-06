@@ -12,7 +12,9 @@ import com.facebook.react.uimanager.UIManagerHelper
 import com.mrousavy.camera.core.ViewNotFoundError
 import com.mrousavy.camera.react.CameraView
 import java.lang.ref.WeakReference
+import com.facebook.react.common.annotations.FrameworkAPI//<--import here
 
+@OptIn(FrameworkAPI::class)//<--insert here
 @Suppress("KotlinJniMissingFunction") // we use fbjni.
 class VisionCameraProxy(private val reactContext: ReactApplicationContext) {
   companion object {
